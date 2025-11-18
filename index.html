@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ridho Alif Utama</title>
+    
+    <link rel="icon" type="image/jpeg" href="images/BW1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* --- CSS STYLING --- */
+      :root {
+        --bg-color: #ffffff;
+        --text-color: #1a1a1a;
+        --accent-color: #007aff;
+        --gray-text: #555555;
+      }
+
+      html {
+        scroll-behavior: smooth; /* PERBAIKAN 2: Agar scroll website halus */
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 680px;
+        margin: 40px auto;
+      }
+
+      /* --- HEADER / PROFILE --- */
+      header {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #eee;
+        transition: transform 0.3s ease; /* Animasi halus */
+      }
+
+      /* Efek saat foto disorot mouse */
+      .profile-pic:hover {
+        transform: scale(1.05);
+        border-color: var(--accent-color);
+      }
+
+      .profile-info h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      /* --- MENU NAVIGASI --- */
+      .top-nav {
+        display: flex; 
+        justify-content: flex-end; 
+        margin-bottom: 20px;
+      }
+
+      .menu-btn {
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      .menu-btn:hover {
+        background-color: #f5f5f5;
+        color: var(--accent-color);
+      }
+
+      /* --- DESKRIPSI --- */
+      .bio-section {
+        margin-bottom: 50px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 30px;
+      }
+
+      .bio-text {
+        color: var(--gray-text);
+        margin-bottom: 15px;
+      }
+
+      .contact-link {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .contact-link:hover {
+        text-decoration: underline;
+      }
+
+      /* --- SECTIONS --- */
+      .section-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #111;
+        border-left: 4px solid var(--accent-color); /* Aksen dekorasi */
+        padding-left: 10px;
+      }
+
+      .content-block {
+        margin-bottom: 50px;
+      }
+
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        background-color: #f0f0f0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Bayangan halus */
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* --- RESPONSIVE --- */
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+        }
+        .profile-info p {
+            margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top-nav">
+        <a href="#contact" class="menu-btn">Contact Me ↓</a> 
+      </div>
+
+      <header>
+        <img
+          src="images/BW2.jpg"
+          alt="Ridho Alif Utama"
+          class="profile-pic"
+        />
+
+        <div class="profile-info">
+          <h1>Ridho Alif Utama</h1>
+          <p style="color: #666; font-family: monospace; font-size: 0.9rem;">/do-ci &bull; /dot &bull; /ri-dho</p>
+        </div>
+      </header>
+
+      <section class="bio-section">
+        <p class="bio-text">
+          Mengubah data spasial menjadi seni visual. <br />
+          <em>Where geography meets design.</em>
+        </p>
+
+        <a href="https://www.instagram.com/rydhx/" target="_blank" class="contact-link">
+          Interested? DM me on Instagram!
+        </a>
+      </section>
+
+      <section class="content-block">
+        <h2 class="section-title">Newest Upload</h2>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/GVrOFyZd0r8?si=VBZuNryDVa8ga6IM&amp;start=473"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="content-block">
+        <h2 class="section-title">Newest Spatial Project</h2>
+
+        <div class="video-wrapper" style="padding-bottom: 65%">
+          <iframe
+            src="https://google.earthengine.app/view/forest-change"
+            allowfullscreen
+            style="border:0;"
+          >
+          </iframe>
+        </div>
+
+        <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: start; gap: 20px;">
+          <p style="font-size: 0.9rem; color: #555; line-height: 1.4;">
+            <strong>Analisis Tutupan Lahan:</strong> Menggunakan citra Sentinel-2 & algoritma Random Forest untuk deteksi perubahan hutan.
+          </p>
+          <a
+            href="https://google.earthengine.app/view/forest-change"
+            target="_blank"
+            style="font-size: 0.85rem; color: #007aff; text-decoration: none; font-weight: 600; white-space: nowrap;"
+          >
+            Buka Full Screen ↗
+          </a>
+        </div>
+      </section>
+
+      <footer id="contact" style="text-align: center; font-size: 0.8rem; color: #888; margin-top: 80px; padding-top: 20px; border-top: 1px solid #eee;">
+        <p>&copy; 2025 Ridho Alif Utama. All rights reserved.</p>
+    </div>
+  </body>
+</html>
